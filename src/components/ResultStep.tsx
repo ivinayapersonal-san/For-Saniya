@@ -11,7 +11,7 @@ export const ResultStep: React.FC<ResultStepProps> = ({ onNext }) => {
       {/* Angry Mochi Peach Cat GIF with Neon Red Glow */}
       <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
         <img 
-          src="https://media.tenor.com/y265Rt6S76wAAAAC/mochi-peach-cat-angry.gif" 
+          src="https://media.tenor.com/images/6863508795984743819/tenor.gif" 
           alt="Angry Mochi Peach Cat"
           className="w-full h-full object-cover"
           loading="eager"
