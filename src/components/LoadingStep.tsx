@@ -10,9 +10,9 @@ export const LoadingStep: React.FC<LoadingStepProps> = ({ progress, loadingText 
   return (
     <div className="text-center py-4 space-y-5 animate-fade-in">
       {/* Fast-loading Direct Cat GIF with Neon Scanner Overlay */}
-      <div className="w-full max-w-[320px] aspect-[1.79/1] rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.3)] bg-zinc-950 relative mx-auto flex items-center justify-center">
+      <div className="w-full max-w-[320px] aspect-[1.2/1] rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.3)] bg-zinc-950 relative mx-auto flex items-center justify-center">
         <img 
-          src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" 
+          src="/2.gif" 
           alt="Cute scanning cat"
           className="w-full h-full object-cover"
           loading="eager"
