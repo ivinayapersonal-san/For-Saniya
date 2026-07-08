@@ -172,15 +172,15 @@ const Index = () => {
       {/* Main Container */}
       <div className="w-full max-w-md bg-white/80 backdrop-blur-md border border-pink-100 rounded-3xl shadow-xl p-6 md:p-8 relative z-10 transition-all duration-500 transform hover:scale-[1.01]">
         
-        {/* Header / Logo */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="bg-pink-100 p-2 rounded-full">
-            <Activity className="w-5 h-5 text-pink-500 animate-pulse" />
-          </div>
-          <span className="text-xs font-bold tracking-widest text-pink-400 uppercase">
-            Saniya-Scanner v2.0
-          </span>
-        </div>
+       {/* Header / Logo */}
+<div className="flex items-center justify-center gap-2 mb-6">
+  <div className="bg-pink-100 p-2 rounded-full">
+    <Activity className="w-5 h-5 text-pink-500 animate-pulse" />
+  </div>
+  <span className="text-xs font-bold tracking-widest text-pink-500">
+    Scanner by Idiot Vinay 😅
+  </span>
+</div>
 
         {/* STEP 1: LOADING SCREEN */}
         {step === "loading" && (
