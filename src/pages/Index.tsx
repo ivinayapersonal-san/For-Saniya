@@ -96,12 +96,21 @@ const Index = () => {
     playClickSound();
     setQuizAnswer(choice);
 
-    // Both options are Vinay and both are correct!
-    setQuizMessage("🎯 Correct! Vinay is 100% responsible.");
-    setTimeout(() => {
-      playSuccessSound();
-      setStep("diagnostics");
-    }, 2000);
+    if (choice === "Vinay") {
+      setQuizMessage("🎯 Correct! Vinay is 100% responsible.");
+      setTimeout(() => {
+        playSuccessSound();
+        setStep("diagnostics");
+      }, 2000);
+    } else {
+      playErrorSound();
+      setQuizMessage(`❌ Incorrect! "${choice}" is innocent. Try again!`);
+      // Reset after a short delay to let them choose again
+      setTimeout(() => {
+        setQuizAnswer(null);
+        setQuizMessage("");
+      }, 1800);
+    }
   };
 
   // Handle Forgive Button Click
