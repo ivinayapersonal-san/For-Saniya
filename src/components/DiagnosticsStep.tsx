@@ -16,6 +16,16 @@ export const DiagnosticsStep: React.FC<DiagnosticsStepProps> = ({ diagnosticStep
         <p className="text-xs text-zinc-500">Analyzing system logs and brain activity</p>
       </div>
 
+      {/* Diagnostic Cat GIF with Neon Pink Glow */}
+      <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
+        <img 
+          src="/4.gif" 
+          alt="Diagnostic Cat"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+
       <div className="space-y-4 bg-zinc-950 p-4 rounded-2xl border border-pink-500/20 font-mono text-xs shadow-[inset_0_0_10px_rgba(0,0,0,0.6)]">
         {/* Diagnostic Item 1 */}
         <div className={`flex items-start justify-between gap-2 transition-all duration-500 ${
