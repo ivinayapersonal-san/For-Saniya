@@ -1,5 +1,4 @@
 import React from "react";
-import { Heart } from "lucide-react";
 
 interface ForgivenStepProps {
   onRestart: () => void;
@@ -8,11 +7,14 @@ interface ForgivenStepProps {
 export const ForgivenStep: React.FC<ForgivenStepProps> = ({ onRestart }) => {
   return (
     <div className="text-center py-8 space-y-6 animate-fade-in">
-      <div className="relative w-24 h-24 mx-auto">
-        <div className="absolute inset-0 bg-pink-500/20 rounded-full animate-ping opacity-75"></div>
-        <div className="relative w-24 h-24 bg-pink-500 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(236,72,153,0.6)]">
-          <Heart className="w-12 h-12 text-white fill-current animate-bounce" />
-        </div>
+      {/* Celebration Cat GIF with Neon Pink Glow replacing the heart icon */}
+      <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
+        <img 
+          src="/6.gif" 
+          alt="Friendship Restored Celebration"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
       </div>
 
       <div className="space-y-3">
