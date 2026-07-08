@@ -225,8 +225,14 @@ const Index = () => {
         {/* STEP 2: RESULT CARD */}
         {step === "result" && (
           <div className="text-center py-6 space-y-6 animate-fade-in">
-            <div className="w-24 h-24 bg-red-950/30 rounded-full flex items-center justify-center mx-auto border-2 border-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)] animate-bounce">
-              <span className="text-5xl">😐</span>
+            {/* Angry Mochi Peach Cat GIF with Neon Red Glow */}
+            <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
+              <img 
+                src="https://media.tenor.com/y265Rt6S76wAAAAC/mochi-peach-cat-angry.gif" 
+                alt="Angry Mochi Peach Cat"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
             </div>
 
             <div className="space-y-2">
