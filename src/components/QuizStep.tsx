@@ -24,6 +24,16 @@ export const QuizStep: React.FC<QuizStepProps> = ({ quizAnswer, quizMessage, onC
         <p className="text-xs text-zinc-500">Select the prime suspect to proceed</p>
       </div>
 
+      {/* Cute Cat GIF with Neon Purple Glow */}
+      <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
+        <img 
+          src="/3.gif" 
+          alt="Cute Cat"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+
       <div className="space-y-3">
         {options.map((option) => {
           const isSelected = quizAnswer === option.id;
