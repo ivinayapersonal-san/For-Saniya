@@ -10,7 +10,6 @@ interface QuizStepProps {
 export const QuizStep: React.FC<QuizStepProps> = ({ quizAnswer, quizMessage, onChoice }) => {
   const options = [
     { id: "Someone Else", label: "Someone Else 🤷‍♀️", color: "hover:bg-amber-950/20 hover:border-amber-500/50 border-zinc-800 text-zinc-300" },
-    { id: "Bad Luck", label: "Bad Luck 🍀", color: "hover:bg-blue-950/20 hover:border-blue-500/50 border-zinc-800 text-zinc-300" },
     { id: "Vinay", label: "Vinay 😭 (The Idiot)", color: "hover:bg-pink-950/20 hover:border-pink-500/50 border-pink-500/30 bg-pink-950/10 text-pink-300" }
   ];
 
