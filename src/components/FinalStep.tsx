@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Heart } from "lucide-react";
 
 interface FinalStepProps {
   onForgive: () => void;
@@ -58,7 +57,6 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
           onClick={onForgive}
           className="w-full sm:w-auto flex-1 py-4 px-6 bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:from-pink-600 hover:to-fuchsia-600 text-white font-extrabold rounded-2xl shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-200 transform active:scale-95 flex items-center justify-center gap-2 text-lg z-10"
         >
-          <Heart className="w-6 h-6 fill-current" />
           Forgive Vinay
         </button>
 
