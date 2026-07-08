@@ -21,9 +21,6 @@ export const ForgivenStep: React.FC<ForgivenStepProps> = ({ onRestart }) => {
         <h2 className="text-2xl font-extrabold text-pink-400 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
           MISSION COMPLETED 😛
         </h2>
-        <p className="text-sm text-zinc-300 px-4">
-          The system is back to 100% harmony. Vinay has been successfully forgiven and is officially out of the doghouse!
-        </p>
       </div>
 
       <div className="bg-pink-950/30 border border-pink-500/30 p-4 rounded-2xl shadow-[0_0_15px_rgba(236,72,153,0.1)]">
