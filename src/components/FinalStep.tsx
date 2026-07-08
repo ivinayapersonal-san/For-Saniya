@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
 
@@ -40,10 +42,6 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
       </div>
 
       <div className="space-y-4">
-        <p className="text-lg font-bold text-pink-400 bg-pink-950/40 border border-pink-500/30 py-2 px-4 rounded-xl inline-block shadow-[0_0_15px_rgba(236,72,153,0.2)]">
-          "Vinay is the biggest idiot."
-        </p>
-        
         {/* Heartfelt Letter Container */}
         <div className="bg-zinc-950/60 border border-zinc-800 rounded-2xl p-4 text-left space-y-2 shadow-[inset_0_0_15px_rgba(0,0,0,0.8)]">
           <p className="text-xs font-bold text-pink-400 uppercase tracking-wider">Dear Saniya,</p>
