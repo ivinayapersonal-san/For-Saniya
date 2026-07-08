@@ -184,15 +184,26 @@ const Index = () => {
 
         {/* STEP 1: LOADING SCREEN */}
         {step === "loading" && (
-          <div className="text-center py-8 space-y-6 animate-fade-in">
-            <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
-              <div className="absolute inset-0 border-4 border-pink-100 rounded-full"></div>
-              <div className="absolute inset-0 border-4 border-pink-500 rounded-full border-t-transparent animate-spin"></div>
-              <Search className="w-10 h-10 text-pink-500 animate-bounce" />
+          <div className="text-center py-4 space-y-5 animate-fade-in">
+            {/* Crunchycat Luna GIF Embed with Scanner Overlay */}
+            <div className="w-full max-w-[240px] aspect-[9/16] rounded-2xl overflow-hidden border-2 border-pink-200 shadow-lg bg-pink-50/50 relative mx-auto">
+              <iframe 
+                src="https://tenor.com/embed/9301919548442205824" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                allowFullScreen
+                className="pointer-events-none scale-[1.02]"
+              ></iframe>
+              {/* Scanning line effect */}
+              <div className="absolute inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80 animate-scan shadow-[0_0_8px_rgba(236,72,153,0.8)]"></div>
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-xl font-bold text-gray-800">Scanning Saniya's Mood...</h2>
+              <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center gap-2">
+                <Search className="w-5 h-5 text-pink-500 animate-bounce" />
+                Scanning Saniya's Mood...
+              </h2>
               <p className="text-sm text-gray-500 min-h-[48px] px-4 transition-all duration-300">
                 {loadingText}
               </p>
@@ -468,6 +479,14 @@ const Index = () => {
         }
         .animate-fade-in {
           animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes scan {
+          0% { top: 0%; }
+          50% { top: 100%; }
+          100% { top: 0%; }
+        }
+        .animate-scan {
+          animation: scan 3s linear infinite;
         }
       `}</style>
     </div>
