@@ -8,24 +8,20 @@ interface FinalStepProps {
 export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const moveButton = (e: React.MouseEvent | React.TouchEvent) => {
-    // Prevent any default click behavior
-    e.preventDefault();
+  const moveButton = () => {
+    // Generate random offsets to make the button jump away from the cursor
+    const rangeX = 140;
+    const rangeY = 80;
     
-    // Generate a much larger random offset so it jumps completely out of reach instantly
-    const rangeX = 180;
-    const rangeY = 120;
-    
-    // Generate new coordinates
     let newX = (Math.random() - 0.5) * rangeX * 2;
     let newY = (Math.random() - 0.5) * rangeY * 2;
     
-    // Ensure a minimum jump distance so it doesn't just wiggle in place
-    if (Math.abs(newX - position.x) < 80) {
-      newX += newX > 0 ? 100 : -100;
+    // Ensure it moves a minimum distance so it feels like it's actively running away
+    if (Math.abs(newX - position.x) < 50) {
+      newX += newX > 0 ? 60 : -60;
     }
-    if (Math.abs(newY - position.y) < 60) {
-      newY += newY > 0 ? 80 : -80;
+    if (Math.abs(newY - position.y) < 40) {
+      newY += newY > 0 ? 50 : -50;
     }
 
     setPosition({ x: newX, y: newY });
@@ -51,7 +47,7 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
       </div>
 
       {/* Two Buttons Container */}
-      <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[120px] w-full mt-6 pt-2">
+      <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[100px] w-full mt-6 pt-2">
         {/* Forgive Vinay Button */}
         <button
           onClick={onForgive}
@@ -64,12 +60,10 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
         {/* Runaway No Button */}
         <button
           onMouseEnter={moveButton}
-          onMouseMove={moveButton}
           onTouchStart={moveButton}
-          onClick={(e) => e.preventDefault()}
           style={{
             transform: `translate(${position.x}px, ${position.y}px)`,
-            transition: "transform 0.05s ease-out", // Ultra-fast transition to prevent hover/click
+            transition: "transform 0.15s ease-out",
           }}
           className="w-full sm:w-auto flex-1 py-4 px-6 bg-zinc-900/90 hover:bg-zinc-800/90 text-zinc-300 font-extrabold rounded-2xl border-2 border-red-500/30 shadow-[0_0_15px_rgba(239,68,68,0.15)] select-none cursor-default z-20 transition-all duration-200"
         >
