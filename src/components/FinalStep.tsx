@@ -51,7 +51,7 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
         {/* Forgive Vinay Button */}
         <button
           onClick={onForgive}
-          className="w-full sm:w-auto flex-1 py-4 px-6 bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:from-pink-600 hover:to-fuchsia-600 text-white font-extrabold rounded-2xl shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-200 transform active:scale-95 flex items-center justify-center gap-2 text-lg animate-pulse z-10"
+          className="w-full sm:w-auto flex-1 py-4 px-6 bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:from-pink-600 hover:to-fuchsia-600 text-white font-extrabold rounded-2xl shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-200 transform active:scale-95 flex items-center justify-center gap-2 text-lg z-10"
         >
           <Heart className="w-6 h-6 fill-current" />
           Forgive Vinay
@@ -65,7 +65,7 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
             transform: `translate(${position.x}px, ${position.y}px)`,
             transition: "transform 0.15s ease-out",
           }}
-          className="w-full sm:w-auto flex-1 py-4 px-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-400 font-bold rounded-2xl border border-zinc-700 select-none cursor-default z-20"
+          className="w-full sm:w-auto flex-1 py-4 px-6 bg-zinc-900/90 hover:bg-zinc-800/90 text-zinc-300 font-extrabold rounded-2xl border-2 border-red-500/30 shadow-[0_0_15px_rgba(239,68,68,0.15)] select-none cursor-default z-20 transition-all duration-200"
         >
           No 😢
         </button>
