@@ -185,10 +185,10 @@ const Index = () => {
         {/* STEP 1: LOADING SCREEN */}
         {step === "loading" && (
           <div className="text-center py-4 space-y-5 animate-fade-in">
-            {/* Crunchycat Luna GIF Embed with Scanner Overlay */}
-            <div className="w-full max-w-[240px] aspect-[9/16] rounded-2xl overflow-hidden border-2 border-pink-200 shadow-lg bg-pink-50/50 relative mx-auto">
+            {/* Weird Cat Meme GIF Embed with Scanner Overlay */}
+            <div className="w-full max-w-[320px] aspect-[1.79/1] rounded-2xl overflow-hidden border-2 border-pink-200 shadow-lg bg-pink-50/50 relative mx-auto">
               <iframe 
-                src="https://tenor.com/embed/9301919548442205824" 
+                src="https://tenor.com/embed/9753705227395230753" 
                 width="100%" 
                 height="100%" 
                 frameBorder="0" 
