@@ -10,8 +10,6 @@ import {
   XCircle, 
   HelpCircle, 
   Activity,
-  Smile,
-  Frown,
   RefreshCw
 } from "lucide-react";
 import { playClickSound, playErrorSound, playSuccessSound, playPopSound } from "@/utils/sounds";
@@ -27,7 +25,7 @@ const Index = () => {
   const [diagnosticStep, setDiagnosticStep] = useState(0);
   const [hearts, setHearts] = useState<{ id: number; left: number; delay: number; size: number }[]>([]);
 
-  // 1. Loading Screen Progress
+  // 1. Loading Screen Progress (Configured to take exactly 30 seconds)
   useEffect(() => {
     if (step !== "loading") return;
 
@@ -37,21 +35,22 @@ const Index = () => {
       "Analyzing facial micro-expressions...",
       "Measuring silence decibels...",
       "Scanning WhatsApp reply speed...",
+      "Checking eye-roll frequency...",
       "Warning: High levels of anger detected...",
+      "Checking if Vinay did something stupid (99.9% probability)...",
+      "Analyzing sigh decibels...",
+      "Calibrating apology parameters...",
+      "Calculating chocolate compensation requirements...",
       "Finalizing diagnostic report..."
     ];
 
-    let currentProgress = 0;
+    const duration = 30000; // 30 seconds
+    const startTime = Date.now();
+
     const interval = setInterval(() => {
-      currentProgress += Math.floor(Math.random() * 8) + 4;
-      if (currentProgress >= 100) {
-        currentProgress = 100;
-        clearInterval(interval);
-        setTimeout(() => {
-          playErrorSound();
-          setStep("result");
-        }, 600);
-      }
+      const elapsed = Date.now() - startTime;
+      const currentProgress = Math.min(Math.floor((elapsed / duration) * 100), 100);
+      
       setProgress(currentProgress);
 
       // Update text based on progress
@@ -60,7 +59,15 @@ const Index = () => {
         texts.length - 1
       );
       setLoadingText(texts[textIndex]);
-    }, 120);
+
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          playErrorSound();
+          setStep("result");
+        }, 800);
+      }
+    }, 100);
 
     return () => clearInterval(interval);
   }, [step]);
@@ -186,7 +193,7 @@ const Index = () => {
 
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800">Scanning Saniya's Mood...</h2>
-              <p className="text-sm text-gray-500 min-h-[40px] px-4 transition-all duration-300">
+              <p className="text-sm text-gray-500 min-h-[48px] px-4 transition-all duration-300">
                 {loadingText}
               </p>
             </div>
