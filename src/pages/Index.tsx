@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
-import { Activity } from "lucide-react";
 import { playClickSound, playErrorSound, playSuccessSound, playPopSound } from "@/utils/sounds";
 
 // Import modular step components
@@ -178,16 +177,6 @@ const Index = () => {
       {/* Main Container with Neon Pink Glow */}
       <div className="w-full max-w-md bg-zinc-900/90 backdrop-blur-xl border-2 border-pink-500 rounded-3xl shadow-[0_0_30px_rgba(236,72,153,0.3)] p-6 md:p-8 relative z-10 transition-all duration-500 transform hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(236,72,153,0.5)]">
         
-        {/* Header / Logo */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="bg-pink-950/50 p-2 rounded-full border border-pink-500/30 shadow-[0_0_10px_rgba(236,72,153,0.2)]">
-            <Activity className="w-5 h-5 text-pink-400 animate-pulse" />
-          </div>
-          <span className="text-xs font-bold tracking-widest text-pink-400 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]">
-            Scanner by Idiot Vinay 😅
-          </span>
-        </div>
-
         {/* Render Modular Steps */}
         {step === "loading" && (
           <LoadingStep progress={progress} loadingText={loadingText} />
