@@ -29,15 +29,17 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
 
   return (
     <div className="text-center py-6 space-y-6 animate-fade-in">
-      <div className="w-20 h-20 bg-amber-950/30 rounded-full flex items-center justify-center mx-auto border-2 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-        <span className="text-4xl">🤦‍♂️</span>
+      {/* Cute Cat GIF with Neon Pink Glow replacing the facepalm emoji and Verdict header */}
+      <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
+        <img 
+          src="/5.gif" 
+          alt="Cute Cat Verdict"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
       </div>
 
       <div className="space-y-2">
-        <div className="inline-flex items-center gap-1 bg-amber-950/50 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-500/30 shadow-[0_0_10px_rgba(245,158,11,0.2)]">
-          Investigation Complete
-        </div>
-        <h2 className="text-2xl font-extrabold text-white drop-shadow-[0_0_8px_rgba(236,72,153,0.4)]">Verdict</h2>
         <p className="text-lg font-bold text-pink-400 bg-pink-950/40 border border-pink-500/30 py-2 px-4 rounded-xl inline-block shadow-[0_0_15px_rgba(236,72,153,0.2)]">
           "Vinay is the biggest idiot."
         </p>
