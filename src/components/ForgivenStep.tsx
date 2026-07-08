@@ -1,10 +1,6 @@
 import React from "react";
 
-interface ForgivenStepProps {
-  onRestart: () => void;
-}
-
-export const ForgivenStep: React.FC<ForgivenStepProps> = ({ onRestart }) => {
+export const ForgivenStep: React.FC = () => {
   return (
     <div className="text-center py-8 space-y-6 animate-fade-in">
       {/* Celebration Cat GIF with Neon Pink Glow replacing the heart icon */}
@@ -31,13 +27,6 @@ export const ForgivenStep: React.FC<ForgivenStepProps> = ({ onRestart }) => {
           You are the absolute best best-friend ever!
         </p>
       </div>
-
-      <button
-        onClick={onRestart}
-        className="text-xs text-zinc-500 hover:text-pink-400 underline transition-colors"
-      >
-        Restart Scanner
-      </button>
     </div>
   );
 };

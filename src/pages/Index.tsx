@@ -158,15 +158,6 @@ const Index = () => {
     setHearts(newHearts);
   };
 
-  const handleRestart = () => {
-    playClickSound();
-    setStep("loading");
-    setProgress(0);
-    setQuizAnswer(null);
-    setQuizMessage("");
-    setDiagnosticStep(0);
-  };
-
   return (
     <div className="min-h-screen bg-zinc-950 flex flex-col items-center justify-center p-4 overflow-hidden relative font-sans selection:bg-pink-500 selection:text-white">
       
@@ -203,7 +194,7 @@ const Index = () => {
         )}
 
         {step === "forgiven" && (
-          <ForgivenStep onRestart={handleRestart} />
+          <ForgivenStep />
         )}
 
       </div>
