@@ -9,7 +9,7 @@ interface QuizStepProps {
 
 export const QuizStep: React.FC<QuizStepProps> = ({ quizAnswer, quizMessage, onChoice }) => {
   const options = [
-    { id: "Vinay 1", label: "Vinay 🤡", color: "hover:bg-pink-950/20 hover:border-pink-500/50 border-pink-500/30 bg-pink-950/10 text-pink-300" },
+    { id: "Vinay 1", label: "Vinay", color: "hover:bg-pink-950/20 hover:border-pink-500/50 border-pink-500/30 bg-pink-950/10 text-pink-300" },
     { id: "Vinay 2", label: "Vinay 😭 (The Idiot)", color: "hover:bg-pink-950/20 hover:border-pink-500/50 border-pink-500/30 bg-pink-950/10 text-pink-300" }
   ];
 
