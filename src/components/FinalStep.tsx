@@ -29,7 +29,7 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
 
   return (
     <div className="text-center py-6 space-y-6 animate-fade-in">
-      {/* Cute Cat GIF with Neon Pink Glow replacing the facepalm emoji and Verdict header */}
+      {/* Cute Cat GIF with Neon Pink Glow */}
       <div className="w-48 h-48 rounded-2xl overflow-hidden border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.4)] bg-zinc-950 mx-auto flex items-center justify-center">
         <img 
           src="/5.gif" 
@@ -39,13 +39,18 @@ export const FinalStep: React.FC<FinalStepProps> = ({ onForgive }) => {
         />
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-4">
         <p className="text-lg font-bold text-pink-400 bg-pink-950/40 border border-pink-500/30 py-2 px-4 rounded-xl inline-block shadow-[0_0_15px_rgba(236,72,153,0.2)]">
           "Vinay is the biggest idiot."
         </p>
-        <p className="text-sm text-zinc-400 px-4 pt-2">
-          He is extremely sorry for being a dummy and promises to make it up to you with infinite chocolates and smiles.
-        </p>
+        
+        {/* Heartfelt Letter Container */}
+        <div className="bg-zinc-950/60 border border-zinc-800 rounded-2xl p-4 text-left space-y-2 shadow-[inset_0_0_15px_rgba(0,0,0,0.8)]">
+          <p className="text-xs font-bold text-pink-400 uppercase tracking-wider">Dear Saniya,</p>
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            Vinay knows he made a mistake, and he's genuinely sorry. You aren't just his best friend—you are someone he cares about deeply. He promises to take care of you, stand by you through everything, make you smile whenever he can, and never take your friendship for granted again. 🥹
+          </p>
+        </div>
       </div>
 
       {/* Two Buttons Container */}
