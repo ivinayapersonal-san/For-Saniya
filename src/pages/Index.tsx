@@ -25,7 +25,7 @@ const Index = () => {
   const [diagnosticStep, setDiagnosticStep] = useState(0);
   const [hearts, setHearts] = useState<{ id: number; left: number; delay: number; size: number }[]>([]);
 
-  // 1. Loading Screen Progress (Configured to take exactly 30 seconds)
+  // 1. Loading Screen Progress (Configured to take exactly 10 seconds)
   useEffect(() => {
     if (step !== "loading") return;
 
@@ -44,7 +44,7 @@ const Index = () => {
       "Finalizing diagnostic report..."
     ];
 
-    const duration = 30000; // 30 seconds
+    const duration = 10000; // 10 seconds
     const startTime = Date.now();
 
     const interval = setInterval(() => {
